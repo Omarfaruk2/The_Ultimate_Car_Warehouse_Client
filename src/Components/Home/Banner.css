@@ -1,0 +1,39 @@
+.banner-div img {
+    width: 100%;
+    height: 600px;
+}
+
+
+.banner-div-one {
+    align-items: center;
+    background-image: url("https://img.freepik.com/premium-photo/ev-electric-car-silhouette-with-low-battery-charging-electric-charge-station-3d-render-illustration_37416-193.jpg?size=626&ext=jpg&ga=GA1.2.1198299981.1652771125");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.banner-div-two {
+    align-items: center;
+    background-image: url("https://img.freepik.com/premium-photo/modern-cars-are-studio-room-3d-illustration-3d-render_37416-196.jpg?size=626&ext=jpg&ga=GA1.2.1198299981.1652771125");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.banner-div-three {
+    align-items: center;
+    background-image: url("https://img.freepik.com/premium-photo/orange-car-is-parked-container-3d-render-illustration_37416-483.jpg?size=626&ext=jpg&ga=GA1.2.1198299981.1652771125");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.backgroun-card {
+    background-color: rgba(0, 0, 0, 0.5);
+}

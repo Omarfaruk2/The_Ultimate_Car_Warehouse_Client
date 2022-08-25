@@ -1,0 +1,46 @@
+.login-head {
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    height: 100vh;
+}
+
+.login-text {
+    color: #f7017c;
+}
+
+.fromOrder form input {
+    border-radius: 20px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 14px;
+    color: white;
+    font-weight: 450;
+    font-size: 18px;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.or hr {
+    border-top: 2px solid blue;
+    width: 45%;
+}
+
+/* input::placeholder {
+    font-weight: bold;
+    opacity: .5;
+    color: white;
+} */
+
+
+@media only screen and (max-width: 576px) {
+    .fromOrder {
+        order: 1;
+    }
+
+    .orderImg {
+        order: 2;
+    }
+}

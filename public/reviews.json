@@ -1,0 +1,38 @@
+[
+    {
+        "_id": "63077ea572442d497dad69",
+        "image": "https://images.cars.com/cldstatic/wp-content/uploads/mazda-cx-50-2022-33-exterior-front-angle.jpg",
+        "description": "hello",
+        "peoplereview": "2023 Mazda CX-50 Review: Looks Aren’t Everything",
+        "reviewimg": "https://images.cars.com/cldstatic/wp-content/uploads/brian-normile-headshot-square-purple.jpg",
+        "rating": "5",
+        "reviewwork": "News Editor"
+    },
+    {
+        "_id": "63077572442d497dad6289",
+        "image": "https://images.cars.com/cldstatic/wp-content/uploads/volvo-c40-recharge-2022-01-exterior-front-angle-scaled.jpg",
+        "description": "hello",
+        "peoplereview": "2023 Mazda CX-50 Review: Looks Aren’t Everything",
+        "reviewimg": "https://images.cars.com/cldstatic/wp-content/uploads/brian-normile-headshot-square-purple.jpg",
+        "rating": "5",
+        "reviewwork": "News Editor"
+    },
+    {
+        "_id": "63077ea572442d497ad6289",
+        "image": "https://images.cars.com/cldstatic/wp-content/uploads/chevrolet-silverado-1500-high-country-2022-01-exterior-front-angle-scaled.jpg",
+        "description": "hello",
+        "peoplereview": "2023 Mazda CX-50 Review: Looks Aren’t Everything",
+        "reviewimg": "https://images.cars.com/cldstatic/wp-content/uploads/brian-normile-headshot-square-purple.jpg",
+        "rating": "5",
+        "reviewwork": "News Editor"
+    },
+    {
+        "_id": "63077ea57242d497dad6289",
+        "image": "https://images.cars.com/cldstatic/wp-content/uploads/ford-bronco-raptor-2022-01-exterior-dynamic-profile-red.jpg",
+        "description": "hello",
+        "peoplereview": "2023 Mazda CX-50 Review: Looks Aren’t Everything",
+        "reviewimg": "https://images.cars.com/cldstatic/wp-content/uploads/brian-normile-headshot-square-purple.jpg",
+        "rating": "5",
+        "reviewwork": "News Editor"
+    }
+]
