@@ -1,12 +1,24 @@
 @media only screen and (max-width: 576px) {
     .menuNaving {
         width: 128px;
-        /* margin: 0; */
         margin-right: 256px;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5;
+        margin-top: 0.75rem
     }
 }
 
 .navbar-head {
     background-color: #33ccff;
 
+}
+
+.header-nav li a,
+.logout-text {
+    color: black;
+    /* text-shadow: 1px 1px rgba(0, 0, 0, 0.4); */
+    font-size: 17px;
+    font-weight: 700;
 }

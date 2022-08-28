@@ -49,7 +49,7 @@ const SignUp = () => {
             <div>
                 <div className='login-head'>
                     <div className='pt-10'>
-                        <div className="card lg:card-side  w-3/4 mx-auto mt-8 shadow-xl grid lg:grid-cols-2 sm:grid-cols-1 ">
+                        <div className="card lg:card-side  w-3/4 mx-auto mt-8  showdow-card grid lg:grid-cols-2 sm:grid-cols-1 ">
                             <figure className='orderImg'>
                                 <img className='w-full' src={loginimg} alt="Album" />
                             </figure>
@@ -60,17 +60,21 @@ const SignUp = () => {
                                 <h2 className="card-title text-emerald-500">Sign Up</h2>
 
                                 <form className=' grid grid-cols-1 gap-[.75rem] mt-10' onSubmit={handleSubmit(onSubmit)}>
-                                    <input
-                                        // value={displayName}
-                                        onChange={(e) => setDisplayName(e.target.value)}
-                                        placeholder='Your Name' {...register("name", { required: true, minLength: 1, maxLength: 50 })} />
+
+
+
+                                    <input onChange={(e) => setDisplayName(e.target.value)} type="text" placeholder="Type Your Name" class="input input-bordered input-accent w-full max-w-xs" {...register("name", { required: true, minLength: 1, maxLength: 50 })} />
 
                                     {/* {errors?.name?.ref?.minLength === 'required' && "First name is required"} */}
 
-                                    <input placeholder='Your Email' {...register("email", { required: true })} />
+                                    {/* <input placeholder='Your Email' {...register("email", { required: true })} /> */}
+
+                                    <input type="email" class="input input-bordered input-accent w-full max-w-xs" placeholder='Type Your Email' {...register("email", { required: true })} />
                                     {errors.lastName && <p>Last name is required</p>}
 
-                                    <input placeholder='Your Password' type="password" {...register("password", { required: true, minLength: 6 })} />
+
+                                    <input placeholder='Type  Your Password' class="input input-bordered input-accent w-full max-w-xs" type="password" {...register("password",
+                                        { required: true, minLength: 6 })} />
                                     <p>{errors.mail?.message}</p>
 
                                     {/* <input type="submit" /> */}
@@ -99,8 +103,8 @@ const SignUp = () => {
                                                 onClick={() => signInWithGoogle()}
 
 
-                                                className='btn btn-primary mx-auto'>
-                                                <img src="" alt="" /> Login With Google
+                                                className='btn btn-info mx-auto'>
+                                                <img className='mr-3' src="https://i.ibb.co/hMzyqvP/googlelo.png" alt="" /> Login With Google
                                             </button>
                                         </p>
                                     </div>

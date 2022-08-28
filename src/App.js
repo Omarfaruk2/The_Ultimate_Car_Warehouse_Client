@@ -1,27 +1,47 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Additems from './Components/AddItems/Additems'
+import Footer from './Components/Footer/Footer'
 import Home from './Components/Home/Home'
 import Navbar from './Components/Home/Navbar'
-import Inventory from './Components/Inventory/Inventory'
+import AllInventory from './Components/Inventory/AllInventory'
+import StockUpdate from './Components/Inventory/StockUpdate'
 import Login from './Components/Login/Login'
+import RequireAuth from './Components/Login/RequireAuth'
 import SignUp from './Components/Login/SignUp'
 import Myitems from './Components/Myitems/Myitems'
+import Notfound from './Components/NotFound/Notfound'
 
 function App() {
   return (
     <div>
 
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/inventory" element={<Inventory />} />
+
+        <Route path="inventory" element={
+          // <RequireAuth>
+          <AllInventory />
+          // </RequireAuth>
+        } />
+
+        <Route path="/inventory/:id" element={
+          <RequireAuth>
+            <StockUpdate />
+          </RequireAuth>
+
+        } />
+
         <Route path="/additems" element={<Additems />} />
         <Route path="/myitems" element={<Myitems />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Signup" element={<SignUp />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
+      <Footer />
 
     </div>
   )

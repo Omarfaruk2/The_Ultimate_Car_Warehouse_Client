@@ -1,0 +1,6 @@
+.table-tr th,
+.table-td td {
+    margin: 10px 40px;
+    padding: 20px;
+    border: 1px solid black;
+}

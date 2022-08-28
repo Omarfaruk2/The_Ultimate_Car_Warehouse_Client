@@ -7,15 +7,15 @@ const SingleReviews = ({ review }) => {
     return (
         <div >
             <div className='mb-4'>
-                <div class="card w-full  bg-base-100 shadow-xl">
+                <div className="card w-full  bg-base-100 shadow-xl">
                     <figure><img src={image} alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
+                    <div className="card-body">
+                        <h2 className="card-title">Shoes!</h2>
                         <p className='text-2xl font-semibold'>{peoplereview}</p>
                     </div>
                     <div className='flex p-3 gap-2 items-center justify-center'>
-                        <div class="avatar">
-                            <div class="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                        <div className="avatar">
+                            <div className="w-16 rounded-full ring ring-info ring-offset-base-100 ring-offset-2">
                                 <img src={reviewimg} />
                             </div>
                         </div>
