@@ -20,14 +20,18 @@ const Navbar = () => {
     const menuItems =
         <>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/inventory">Inventory</Link></li>
-            <li><Link to="/additems">Add Items</Link></li>
-            <li><Link to="/myitems">My Items</Link></li>
+
+            {
+                user && <>
+                    <li><Link to="/inventory">Inventory</Link></li>
+                    <li><Link to="/additems">Add Items</Link></li>
+                    <li><Link to="/myitems">My Items</Link></li>
+                </>
+            }
+
+
             <li><Link to="/blog">Blog</Link></li>
-
-            {/* <li><Link to="/login">Login</Link></li>
-            <li><Link to="/signup">Sign Up</Link></li> */}
-
+            <li><Link to="/task">Task</Link></li>
 
 
 

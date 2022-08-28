@@ -5,7 +5,7 @@
         "description": "hello",
         "peoplereview": "2023 Mazda CX-50 Review: Looks Aren’t Everything",
         "reviewimg": "https://images.cars.com/cldstatic/wp-content/uploads/brian-normile-headshot-square-purple.jpg",
-        "rating": "5",
+        "rating": "4.8",
         "reviewwork": "News Editor"
     },
     {
@@ -14,7 +14,7 @@
         "description": "hello",
         "peoplereview": "2023 Mazda CX-50 Review: Looks Aren’t Everything",
         "reviewimg": "https://images.cars.com/cldstatic/wp-content/uploads/aaron-bragman-headshot-square-purple.jpg",
-        "rating": "5",
+        "rating": "4.5",
         "reviewwork": "News Editor"
     },
     {
@@ -23,7 +23,7 @@
         "description": "hello",
         "peoplereview": "2023 Mazda CX-50 Review: Looks Aren’t Everything",
         "reviewimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSti4vkjFhDG7hcN_g46Go3aFPBMzgmZ5LcHv2BSrjsWvWnGq300WcvQTN3DlhAF0s8nHI&usqp=CAU",
-        "rating": "5",
+        "rating": "4.6",
         "reviewwork": "News Editor"
     },
     {
@@ -32,7 +32,7 @@
         "description": "hello",
         "peoplereview": "2023 Mazda CX-50 Review: Looks Aren’t Everything",
         "reviewimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz6FOCo35CJu6oDizL-rBOxFRoB_txplyFcOpAlSP2-qpUJar1J9n0FfZWBvEcCZ_Yz1w&usqp=CAU",
-        "rating": "5",
+        "rating": "3.5",
         "reviewwork": "News Editor"
     }
 ]

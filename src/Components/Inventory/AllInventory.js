@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Inventory.css"
 import { useQuery } from 'react-query'
 import fetchPosts from './FetchApi'
 import SingleAllInventory from './SingleAllInventory'
+import { useEffect } from 'react'
+
 const AllInventory = () => {
 
     const { data, error, isError, isLoading } = useQuery('users', fetchPosts)
+
+
+    const [cars, setCars] = useState()
+
+    useEffect(() => {
+        fetch("http://localhost:5000/inventory")
+            .then(res => res.json())
+            .then(cardata => setCars(cardata))
+    }, [])
+
+    // console.log(cars, "cars")
 
     if (isLoading) {
         return <div>Loading...</div>
@@ -16,15 +29,17 @@ const AllInventory = () => {
     if (data) {
         // console.log("data")
     }
-    // console.log(data, "data")
 
     return (
 
         <div className='my-10'>
-            <div className='grid grid-cols-3 mx-auto gap-y-5'>
+            <p className="text-center text-4xl font-serif my-6">Our All Inventory</p>
+            <div className='grid lg:grid-cols-3 sm:grid-cols-1 mx-auto inventory_head gap-y-5'>
                 {
-                    data?.map(car => <SingleAllInventory
+                    cars?.map(car => <SingleAllInventory
                         car={car}
+                        cars={cars}
+                        setCars={setCars}
                         key={car?._id}
                         isLoading={isLoading}
                         isError={isError}

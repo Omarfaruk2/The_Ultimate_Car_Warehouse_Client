@@ -5,6 +5,7 @@ import swal from 'sweetalert'
 
 import { useQuery } from 'react-query'
 import fetchPostsCar from "./FetchUpdateCarApi"
+import { Icon } from '@iconify/react'
 
 const StockUpdate = () => {
 
@@ -14,19 +15,6 @@ const StockUpdate = () => {
     const [message, setMessage] = useState('')
     const isAnonymous = true
 
-
-
-    // const { data, error, isError, isLoading } = useQuery(['userscar'], id, fetchPostsCar)
-
-    // if (isLoading) {
-    //     return <div>Loading...</div>
-    // }
-    // if (isError) {
-    //     return <div>Error! {error.message}</div>
-    // }
-    // if (data) {
-    //     console.log("data", data)
-    // }
 
 
     useEffect(() => {
@@ -61,9 +49,7 @@ const StockUpdate = () => {
                 setCard(updateStock)
             })
     }
-
     //------------------------- stock update--------------------------
-
 
     const modal = () => {
         return <div>
@@ -81,8 +67,6 @@ const StockUpdate = () => {
         </div >
     }
 
-
-
     const handleRestock = (e) => {
 
         e.preventDefault()
@@ -97,8 +81,6 @@ const StockUpdate = () => {
         else if (e.target.number.value) {
 
             e.currentTarget.disabled = true
-
-            // console.log(e.currentTarget.disabled, "target")
             const previousStock = car.quantity
             let fieldStock = parseInt(e.target.number.value)
 
@@ -117,52 +99,71 @@ const StockUpdate = () => {
                     const quantity = newQuantity
                     const updatedQuantity = { ...car, quantity }
                     setCard(updatedQuantity)
-
-                    // console.log(e.target.reset(0))
-
                     e.target.reset()
-                    // e.target.number.value = ''
-
                 })
                 .catch((error) => {
                     console.error(error)
                 })
         }
-
-
-
-
     }
 
-
-
-
-
-
-
-
-
     return (
-        <div>
-            <h2>Hello {id}</h2>
-            <div className='lg:h-[140vh]'>
-                <div className="card lg:h-[120vh] flex justify-center items-center lg:card-side lg:w-4/5 mx-auto shadow-xl">
-                    <figure><img className='w-5/6' src={image} alt="Album" /></figure>
+        <div className=''>
 
-                    <div className="card-body mt-20 ">
-                        <h2 className="card-title">{name}</h2>
+            <div className='lg:h-[110vh]'>
+                <div className="card lg:h-[110vh] grid lg:grid-cols-5 sm:grid-cols-1 lg:card-side lg:w-10/12 mx-auto card-shadow lg:p-10 sm:p-5">
+                    <figure className='lg:col-span-2 mx-auto'>
+                        <img className='sm:w-1/2 lg:w-full' src={image} alt="Album" />
+
+                    </figure>
+
+                    <div className="card-body mt-20 lg:col-span-3">
+                        <div className='flex items-center justify-between'>
+                            <h2 className="card-title">{name}</h2>
+                            <div className=' flex gap-3'>
+                                <Icon icon="ic:round-facebook" />
+                                <Icon icon="bxl:instagram-alt" />
+                                <Icon icon="ant-design:twitter-circle-filled" />
+                                <Icon icon="bi:youtube" />
+                            </div>
+                        </div>
+
                         <span>{description}</span>
-                        <div className='grid grid-cols-1 gap-4'>
+                        <div className='grid grid-cols-2 '>
                             <span className=''><b>ID: $</b> {id}</span>
                             <span className='text-lg'><b>Price: $</b> {price}</span>
                             <span className='text-lg'><b>SupperName:</b> {supplierName}</span>
                             <div>
                             </div>
                         </div>
+                        <div className='grid grid-cols-2 mt-2'>
+                            <div className='flex items-center justify-center'>
+                                <Icon className='text-3xl text-gray-400'
+                                    icon="bi:fuel-pump-diesel-fill"
+                                />
+                                <span className='mx-4 font-bold'>Diesel</span>
+                            </div>
+                            <div className='flex items-center justify-center ml-14'>
+                                <Icon className='text-4xl text-gray-400'
+                                    icon="mdi:car-speed-limiter"
+                                />
+                                <span className='mx-4 font-bold'>Speed :450 Km/h</span>
+                            </div>
+                            <div className='flex items-center justify-center'>
+                                <Icon className='text-3xl text-gray-400'
+                                    icon="fluent:engine-24-filled" />
+                                <span className='mx-4 font-bold'>Engine</span>
+                            </div>
+                            <div className='flex items-center justify-center'>
+                                <Icon className='text-3xl text-gray-400'
+                                    icon="ant-design:setting-twotone" />
+                                <span className='mx-4 font-bold'>White</span>
+                            </div>
+                        </div>
 
                         {/* delivered items */}
 
-                        <div className='flex justify-center items-center gap-x-5 stock-input'>
+                        <div className='flex justify-center items-center gap-x-5 stock-input p-4 lg:w-3/5 mx-auto'>
                             <span className='text-xl'><b>Quantity:</b> {quantity}</span>
                             <button onClick={() => handleDelivered(_id)} className='btn btn-info'> Delivered</button>
                         </div>
@@ -170,33 +171,18 @@ const StockUpdate = () => {
                         {/* stock update */}
 
                         <span className='text-center text-2xl'>Stock Update</span>
-                        <div className='flex justify-center items-center  stock-input'>
+                        <div className='flex justify-center items-center  py-5 px-3 stock-input lg:w-3/5 mx-auto '>
 
                             <form onSubmit={handleRestock} >
                                 <input
                                     name="number"
                                     type="number"
                                     placeholder="Type here"
-
-                                    // end 
                                     id="message"
-                                    // name="message"
-                                    // value={message}
-                                    // onChange={event => setMessage(event.target.value)}
-                                    // end
-
-
-                                    className="input input-bordered input-info mx-2 w-1/2 max-w-xs" />
-                                <button
-                                    // disabled={!message}
-                                    // disabled={isAnonymous ? true : false}
-                                    className='btn btn-warning mx-2'> Stock Update</button>
+                                    className="input input-bordered input-info w-1/2 max-w-xs" />
+                                <button className='btn btn-warning  mx-2'>Stock Update</button>
                             </form>
-
-
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -205,18 +191,5 @@ const StockUpdate = () => {
 }
 
 export default StockUpdate
-
-// admin
-// 77NMbdKezJB60e6A
-
-// const { MongoClient, ServerApiVersion } = require('mongodb');
-// const uri = "mongodb+srv://admin:<password>@cluster0.odsjfxq.mongodb.net/?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-
-// client.connect(err => {
-//   const collection = client.db("test").collection("devices");
-//   // perform actions on the collection object
-//   client.close();
-// });
 
 

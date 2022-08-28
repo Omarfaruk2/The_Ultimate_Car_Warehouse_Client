@@ -28,7 +28,7 @@ const Inventory = () => {
 
         <div className=''>
             <h2 className='text-center text-3xl font-mono my-5'>Inventory Items</h2>
-            <div className='grid grid-cols-3 mx-auto gap-y-5'>
+            <div className='grid lg:grid-cols-3 sm:grid-cols-1 sm:px-3 inventory_head mx-auto gap-y-5'>
                 {
                     data?.slice(0, 6)?.map(car => <SingleInventroy
                         car={car}

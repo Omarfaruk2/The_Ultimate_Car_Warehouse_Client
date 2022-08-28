@@ -16,8 +16,8 @@ const Reviews = () => {
 
     return (
         <div>
-            <h2 className='text-4xl text-center font-serif my-12 text-sky-400'>The latest new car releases and expert reviews</h2>
-            <div className='grid grid-cols-4 mb-9 gap-4 w-11/12 mx-auto'>
+            <h2 className='text-4xl text-center font-serif my-12 text-sky-800'>The latest new car releases and expert reviews</h2>
+            <div className='grid lg:grid-cols-4 sm:grid-cols-1 mb-9 gap-4 w-11/12 mx-auto'>
                 {
                     reviews?.map(review => <SingleReviews
                         review={review}

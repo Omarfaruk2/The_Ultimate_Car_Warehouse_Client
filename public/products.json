@@ -1,97 +1,97 @@
 [
     {
-        "name": "Porsche 911 Carrera 2017",
+        "name": "Porsche 911 Carrera ",
         "image": "https://templates.scriptsbundle.com/carspot/demos/images/posting/2.jpg",
-        "description": "Note that the development build is not optimized.To create a production build, use yarn build.",
-        "price": "920,000",
+        "description": "When one may bring up the concept of lightning-fast hypercars, a certain set of brands come to mind. These are companies that have proved to the world, that they truly are a benchmark when it comes to sheer speed and performance",
+        "price": "120,000",
         "quantity": "520",
         "supplierName": "Classical Auto"
     },
     {
-        "name": "Porsche 911 Carrera 2017",
+        "name": "McLaren P1",
         "image": "https://templates.scriptsbundle.com/carspot/demos/images/posting/3.jpg",
-        "description": "Note that the development build is not optimized.To create a production build, use yarn build.",
-        "price": "920,000",
+        "description": "The McLaren P1 is the successor to the legendary McLaren F1. This was a limited-edition car that ran on a Hybrid setup. Released in 2013 the McLaren P1 features a 3.8-litre twin-turbocharged V8 engine which provided an output of 727 bhp and 720 Nm of torque. ",
+        "price": "620,000",
         "quantity": "520",
         "supplierName": "Classical Auto"
     },
     {
-        "name": "Porsche 911 Carrera 2017",
+        "name": "Pagani Huayra",
         "image": "https://templates.scriptsbundle.com/carspot/demos/images/posting/4.jpg",
-        "description": "Note that the development build is not optimized.To create a production build, use yarn build.",
-        "price": "920,000",
+        "description": "The McLaren P1 is the successor to the legendary McLaren F1. This was a limited-edition car that ran on a Hybrid setup. Released in 2013 the McLaren P1 features a 3.8-litre twin-turbocharged V8 engine which provided an output of 727 bhp and 720 Nm of torque. ",
+        "price": "780,000",
         "quantity": "520",
         "supplierName": "Classical Auto"
     },
     {
-        "name": "Porsche 911 Carrera 2017",
+        "name": "La Ferrari",
         "image": "https://templates.scriptsbundle.com/carspot/demos/images/posting/5.jpg",
-        "description": "Note that the development build is not optimized.To create a production build, use yarn build.",
-        "price": "920,000",
+        "description": "La Ferrari, stands for “The Ferrari” in Italian, in turn suggesting that this in fact is the definitive Ferrari to own. Although this is one of the most approachable cars on this list in terms of financial cost, at $1.4 million for a new one, they certainly are not cheap. ",
+        "price": "720,000",
         "quantity": "520",
         "supplierName": "Classical Auto"
     },
     {
-        "name": "Porsche 911 Carrera 2017",
+        "name": "McLaren Elva",
         "image": "https://templates.scriptsbundle.com/carspot/demos/images/posting/6.jpg",
-        "description": "Note that the development build is not optimized.To create a production build, use yarn build.",
-        "price": "920,000",
+        "description": "Taken a French word for the name, “Elva” means “She Goes”. Looking at one of the most latest engineering marvels from McLaren, the Elva is a car that is made to be driven with a helmet on. Producing 805 bhp from a twin-turbocharged 4.0 litre V8, w",
+        "price": "986,000",
         "quantity": "520",
         "supplierName": "Classical Auto"
     },
     {
-        "name": "Porsche 911 Carrera 2017",
+        "name": "Bentley Mulliner",
         "image": "https://templates.scriptsbundle.com/carspot/demos/images/posting/7.jpg",
-        "description": "Note that the development build is not optimized.To create a production build, use yarn build.",
-        "price": "920,000",
+        "description": "The Bentley Bacalar may pull one's gaze due to its exquisite design elements. With a long sleek hood, it definitely looks like a Bentley, however, this car is no slouch in the performance department either. This gorgeous grand tourer is called to be the “ultimate expression of open luxury”. Equipped with Bentley's famous 6.0 litre W12 turbocharged engine",
+        "price": "265,000",
         "quantity": "520",
         "supplierName": "Classical Auto"
     },
     {
-        "name": "Porsche 911 Carrera 2017",
+        "name": "Lotus Evija",
         "image": "https://templates.scriptsbundle.com/carspot/demos/images/posting/8.jpg",
-        "description": "Note that the development build is not optimized.To create a production build, use yarn build.",
-        "price": "920,000",
+        "description": "Lotus has been aiming for a big comeback with the brand new Emira and the Eletre. Lotus has planned to bring a wide range of new automobiles to the market within the next few years post 2022, and that includes the flagship, the Lotus Evija. This beautiful all electric machine pushes 2000 Bhp using one electric motor per wheel. However only 130 road going units are to be built.",
+        "price": "470,000",
         "quantity": "520",
         "supplierName": "Classical Auto"
     },
     {
-        "name": "Porsche 911 Carrera 2017",
+        "name": "Pininfarina Battista",
         "image": "https://templates.scriptsbundle.com/carspot/demos/images/posting/9.jpg",
-        "description": "Note that the development build is not optimized.To create a production build, use yarn build.",
-        "price": "920,000",
+        "description": "The car is named after its founder, Pininfarina Battista. Showcased for the first time at the Geneva Motor Show, the Battista is an all-electric vehicle. The car is equipped with a 120-kWh battery that powers four motors, one at each wheel. The combined output of this setup equates to a whopping 1827 bhp while being able to pull from 0-100 kmph in just 2.0 seconds flat and a top speed of 350 kmph. As it is a limited production vehicle, only 150 of these are to be produced.",
+        "price": "260,000",
         "quantity": "520",
         "supplierName": "Classical Auto"
     },
     {
-        "name": "Porsche 911 Carrera 2017",
+        "name": "Mercedes-AMG One",
         "image": "https://templates.scriptsbundle.com/carspot/demos/images/posting/10.jpg",
-        "description": "Note that the development build is not optimized.To create a production build, use yarn build.",
-        "price": "920,000",
+        "description": "With the first official announcement of the Mercedes-AMG One given in the year 2017, it has been quite a while since Mercedes promised its customers that a road-legal model of this car is in development. Now we are closer than ever to the real deal. This car has taken a lot of mechanical information from the Mercedes F1 racing car. This hybrid hyp",
+        "price": "450,000",
         "quantity": "520",
         "supplierName": "Classical Auto"
     },
     {
-        "name": "Porsche 911 Carrera 2017",
+        "name": "Mercedes-CG Five",
         "image": "https://templates.scriptsbundle.com/carspot/demos/images/posting/1.jpg",
-        "description": "Note that the development build is not optimized.To create a production build, use yarn build.",
-        "price": "920,000",
+        "description": "Even though it may seem to be one of the most aggressive looking Bugatti cars, it certainly isn't one of the most expensive. The Bugatti Bolide is an extreme track-focused machine, powered by the legendary 8.0 Litre W16, the car produces 1824 bhp and 1850 Nm of torque. The car's prime focus is aerodynamics and power to we",
+        "price": "230,000",
         "quantity": "520",
         "supplierName": "Classical Auto"
     },
     {
-        "name": "Porsche 911 Carrera 2017",
+        "name": " Aston Martin Valkyrie",
         "image": "https://templates.scriptsbundle.com/carspot/demos/images/posting/11.jpg",
-        "description": "Note that the development build is not optimized.To create a production build, use yarn build.",
-        "price": "920,000",
+        "description": "This piece of machinery is so sought-after that it sold out prior to even reaching the market. The car is powered by a naturally aspirated Cosworth 6.5 litre V12 engine producing a massive 1160 bhp and 900 Nm of torque and a top speed of over 330 kmph. With its production limited to only 150 units, it would be a special occasion if one simply saw it driving by. The Valkyrie also comes in an AMR-Pro variant which is a track-only model and reached 402 kmph",
+        "price": "140,000",
         "quantity": "520",
         "supplierName": "Classical Auto"
     },
     {
-        "name": "Porsche 911 Carrera 2017",
-        "image": "https://templates.scriptsbundle.com/carspot/demos/images/posting/12.jpg",
-        "description": "Note that the development build is not optimized.To create a production build, use yarn build.",
-        "price": "920,000",
+        "name": "Pagani Huayra Roadster BC",
+        "image": "https://c.ndtvimg.com/2022-01/1g35u068_car_625x300_11_January_22.jpg",
+        "description": "W Motors, which is a company based in Dubai, shook the world with its debut of the Lykan Hypersport in 2013. This car was not just an automobile, but a statement. Housing 420 15-carat diamonds in its LED light housings and a completely holographic d",
+        "price": "230,000",
         "quantity": "520",
         "supplierName": "Classical Auto"
     }

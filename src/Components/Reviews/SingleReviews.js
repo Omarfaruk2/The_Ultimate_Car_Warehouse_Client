@@ -1,4 +1,7 @@
 import React from 'react'
+import Rating from 'react-rating'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const SingleReviews = ({ review }) => {
 
@@ -7,8 +10,8 @@ const SingleReviews = ({ review }) => {
     return (
         <div >
             <div className='mb-4'>
-                <div className="card w-full  bg-base-100 shadow-xl">
-                    <figure><img src={image} alt="Shoes" /></figure>
+                <div className="card w-full  bg-base-100 card-shadow">
+                    <figure><img className='' src={image} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Shoes!</h2>
                         <p className='text-2xl font-semibold'>{peoplereview}</p>
@@ -22,7 +25,15 @@ const SingleReviews = ({ review }) => {
                         <div>
                             {/* <span>{peoplereview}</span> */}
                             <span>{reviewwork}</span> <br />
-                            <span>Rating : {rating}</span>
+
+
+                            <span>Rating : {rating}
+                                <Rating
+                                    initialRating={rating}
+                                    emptySymbol={<FontAwesomeIcon icon={faStar} />}
+                                    fullSymbol={<FontAwesomeIcon style={{ color: 'goldenrod' }} icon={faStar} />} readonly
+                                ></Rating>
+                            </span>
 
                         </div>
                     </div>
