@@ -1,3 +1,4 @@
+import Aos from 'aos'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Additems from './Components/AddItems/Additems'
@@ -14,7 +15,9 @@ import Myitems from './Components/Myitems/Myitems'
 import Notfound from './Components/NotFound/Notfound'
 import Task from './Components/Task/Task'
 
+
 function App() {
+
   return (
     <div>
 
