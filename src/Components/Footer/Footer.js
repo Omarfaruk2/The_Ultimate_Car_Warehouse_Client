@@ -5,9 +5,9 @@ import { Icon } from '@iconify/react'
 
 const Footer = () => {
     return (
-        <div>
-            <footer className="footer p-10 grid lg:grid-cols-4 sm:grid-cols-2 mt-12  bg-slate-800 text-white">
-                <div>
+        <div className=' bg-slate-800'>
+            <footer className="footer text-center p-10 grid lg:grid-cols-4 sm:grid-cols-2 mt-12  text-white">
+                <div className=''>
                     <span className="text-3xl">Ultimate Warehouse</span>
                     <a className="link link-hover">Branding</a>
                     <a className="link link-hover">Design</a>
@@ -42,6 +42,7 @@ const Footer = () => {
                     </a>
                 </div>
             </footer>
+            <p className='text-center text-white text-xl py-10'>© and ™ TrueCar, Inc. All rights reserved. Vehicle photos © Evox Images © 1986-2022 Chrome Data Solutions, LP</p>
         </div>
     )
 }

@@ -37,7 +37,7 @@ const Login = () => {
     }
 
     if (loading || gloading) {
-        return <Loading className='h-[100vh]'></Loading>
+        return <p className='text-center mx-auto h-[80vh]'><progress className="progress w-1/4 mt-20"></progress></p>
     }
 
     if (user || guser) {
@@ -61,9 +61,9 @@ const Login = () => {
 
     return (
         <div>
-            <div className='login-head'>
+            <div className=''>
                 <div className='pt-10'>
-                    <div className="card lg:card-side  w-3/4 mx-auto mt-8 showdow-card grid lg:grid-cols-2 sm:grid-cols-1 ">
+                    <div className="card lg:card-side bg-base-300  w-3/4 mx-auto mt-8 card-head grid lg:grid-cols-2 sm:grid-cols-1 ">
                         <figure className='orderImg'>
                             <img className='w-full' src={loginimg} alt="Album" />
                         </figure>
@@ -86,7 +86,7 @@ const Login = () => {
 
 
 
-                                <input type="password" placeholder="Type Your Password" className="input input-bordered input-accent w-full max-w-xs" {...register("password", { required: true, minLength: 6 })} />
+                                <input type="password" placeholder=" Type Your Password" className="input input-bordered input-accent w-full max-w-xs" {...register("password", { required: true, minLength: 6 })} />
                                 <p>{errors.mail?.message}</p>
 
                                 {/* <input type="submit" /> */}
@@ -107,7 +107,7 @@ const Login = () => {
                                     alert('Sent email')
                                 }}
 
-                                className='mb-1 text-right'>
+                                className='mb-1 text-right cursor-pointer'>
                                 Forget Password ?
                             </span>
 

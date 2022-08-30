@@ -23,6 +23,11 @@ const StockUpdate = () => {
             .then(data => setCard(data))
     }, [id])
 
+    if (!car) {
+        return <p className='text-center mx-auto h-[80vh]'><progress className="progress w-1/4 mt-20"></progress></p>
+
+    }
+
     // console.log(car, "car")
 
     const { name, image, description, price, quantity, supplierName, _id } = car || {}
@@ -113,14 +118,16 @@ const StockUpdate = () => {
             <div className='lg:h-[110vh]'>
                 <div className="card lg:h-[110vh] grid lg:grid-cols-5 sm:grid-cols-1 lg:card-side lg:w-10/12 mx-auto card-shadow lg:p-10 sm:p-5">
                     <figure className='lg:col-span-2 mx-auto'>
-                        <img className='sm:w-1/2 lg:w-full' src={image} alt="Album" />
+                        <img
+                            data-aos="zoom-in" data-aos-duration="1500"
+                            className='sm:w-1/2  lg:w-full' src={image} alt="Album" />
 
                     </figure>
 
                     <div className="card-body mt-20 lg:col-span-3">
                         <div className='flex items-center justify-between'>
                             <h2 className="card-title">{name}</h2>
-                            <div className=' flex gap-3'>
+                            <div data-aos="zoom-in" data-aos-duration="1000" className='social flex gap-3'>
                                 <Icon icon="ic:round-facebook" />
                                 <Icon icon="bxl:instagram-alt" />
                                 <Icon icon="ant-design:twitter-circle-filled" />
@@ -137,24 +144,24 @@ const StockUpdate = () => {
                             </div>
                         </div>
                         <div className='grid grid-cols-2 mt-2'>
-                            <div className='flex items-center justify-center'>
+                            <div className='flex part items-center justify-center'>
                                 <Icon className='text-3xl text-gray-400'
                                     icon="bi:fuel-pump-diesel-fill"
                                 />
                                 <span className='mx-4 font-bold'>Diesel</span>
                             </div>
-                            <div className='flex items-center justify-center ml-14'>
+                            <div className='flex part items-center justify-center ml-14'>
                                 <Icon className='text-4xl text-gray-400'
                                     icon="mdi:car-speed-limiter"
                                 />
                                 <span className='mx-4 font-bold'>Speed :450 Km/h</span>
                             </div>
-                            <div className='flex items-center justify-center'>
+                            <div className='flex part items-center justify-center'>
                                 <Icon className='text-3xl text-gray-400'
                                     icon="fluent:engine-24-filled" />
                                 <span className='mx-4 font-bold'>Engine</span>
                             </div>
-                            <div className='flex items-center justify-center'>
+                            <div className='flex part items-center justify-center'>
                                 <Icon className='text-3xl text-gray-400'
                                     icon="ant-design:setting-twotone" />
                                 <span className='mx-4 font-bold'>White</span>
@@ -180,7 +187,7 @@ const StockUpdate = () => {
                                     placeholder="Type here"
                                     id="message"
                                     className="input input-bordered input-info w-1/2 max-w-xs" />
-                                <button className='btn btn-warning  mx-2'>Stock Update</button>
+                                <button className='btn btn-black  mx-2'>Stock Update</button>
                             </form>
                         </div>
                     </div>

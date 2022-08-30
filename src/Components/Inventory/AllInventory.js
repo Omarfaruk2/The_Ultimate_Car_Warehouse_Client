@@ -20,8 +20,8 @@ const AllInventory = () => {
 
     // console.log(cars, "cars")
 
-    if (isLoading) {
-        return <progress className="progress w-56"></progress>
+    if (isLoading || !cars) {
+        return <p className='text-center mx-auto h-[80vh]'><progress className="progress w-1/4 mt-20"></progress></p>
     }
     if (isError) {
         return <div>Error! {error.message}</div>

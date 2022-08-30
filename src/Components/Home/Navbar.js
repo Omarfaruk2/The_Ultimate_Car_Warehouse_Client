@@ -56,8 +56,8 @@ const Navbar = () => {
                 className="navbar bg-slate-800 ">
                 <div className="navbar-start">
 
-                    <h3 className=" w-20 h-16 my-auto lg:ml-24 ml-6  normal-case text-xl">
-                        <img src="https://i.ibb.co/Nj5GD1L/6558e0f6d14195c7e8893728011b2f30-removebg-preview.png" alt="" />
+                    <h3 onClick={() => navigate("/")} className=" w-full mt-4 h-16 my-auto lg:ml-24 ml-6  normal-case text-xl">
+                        <img src="https://i.ibb.co/bRkNFcy/carremove.png" alt="navberlogo" />
                     </h3>
                 </div>
                 <div className="navbar-center hidden lg:flex">

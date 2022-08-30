@@ -36,7 +36,7 @@ const Inspacetion = () => {
                     <img className='hover:animate-spin'
                         data-aos="fade-right"
                         // data-aos-anchor="#example-anchor"
-                        data-aos-offset="300"
+                        data-aos-offset="100"
                         data-aos-duration="600"
                         src="https://templates.scriptsbundle.com/carspot/demos/images/car-in-red.png" alt="" />
                 </div>
@@ -45,7 +45,14 @@ const Inspacetion = () => {
                 '>
 
                     <span className='text-2xl font-mono text-center'>Want To Sale Your Car ?
-                        <img className="hover:animate-spin" width="60px" src="https://pngimg.com/uploads/car_wheel/car_wheel_PNG23298.png" alt="" />
+                        <div className='flex'>
+                            <img className="hover:animate-spin" width="60px" src="https://pngimg.com/uploads/car_wheel/car_wheel_PNG23298.png" alt="" />
+
+
+
+                            <img className="hover:animate-spin" width="60px" src="https://www.freeiconspng.com/thumbs/car-tire-png/car-wheel-png-image-free-download--car-wheel-png-image-free--11.png" alt="" />
+                        </div>
+
                     </span> <br />
                     <span className='text-3xl font-bold text-center'>CAR INSPECTION</span> <br /> <br />
 

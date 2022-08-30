@@ -14,7 +14,7 @@ const SingleAllInventory = ({ car, isLoading, isError, cars, setCars }) => {
 
 
     if (isLoading || uloading || isError || !car) {
-        return <progress className="progress w-56"></progress>
+        return <p className='text-center mx-auto h-[80vh]'><progress className="progress w-1/4 mt-20"></progress></p>
     }
     const { name, image, description, price, quantity, supplierName, _id } = car
     const stockupdate = (id) => {
@@ -64,7 +64,7 @@ const SingleAllInventory = ({ car, isLoading, isError, cars, setCars }) => {
 
             <div className="card w-11/12 mx-auto bg-base-100 mt-8 card-shadow">
 
-                <figure><img src={image} alt="Shoes" /></figure>
+                <figure><img src={image} alt="img" /></figure>
 
                 <div className="card-body px-8 pt-5 ">
                     <h2 className="card-title">
