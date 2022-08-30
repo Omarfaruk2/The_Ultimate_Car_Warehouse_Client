@@ -78,7 +78,7 @@ const SingleAllInventory = ({ car, isLoading, isError, cars, setCars }) => {
                         <p className='text-xl'><b>SupplierName:</b> {supplierName}</p>
                     </div>
 
-                    <div className='grid grid-cols-2 mt-2'>
+                    {/* <div className='grid grid-cols-2 mt-2'>
                         <div className='flex items-center justify-center'>
                             <Icon className='text-3xl text-gray-400'
                                 icon="bi:fuel-pump-diesel-fill"
@@ -101,7 +101,7 @@ const SingleAllInventory = ({ car, isLoading, isError, cars, setCars }) => {
                                 icon="ant-design:setting-twotone" />
                             <span className='mx-4 font-bold'>White</span>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
 
