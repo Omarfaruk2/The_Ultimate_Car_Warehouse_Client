@@ -11,8 +11,10 @@ const SingleAllInventory = ({ car, isLoading, isError, cars, setCars }) => {
     const [, uloading] = useAuthState(auth)
     const navigate = useNavigate()
 
+
+
     if (isLoading || uloading || isError || !car) {
-        return <p>Loading........</p>
+        return <progress className="progress w-56"></progress>
     }
     const { name, image, description, price, quantity, supplierName, _id } = car
     const stockupdate = (id) => {
@@ -30,7 +32,7 @@ const SingleAllInventory = ({ car, isLoading, isError, cars, setCars }) => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    const url = `http://localhost:5000/inventory/${id}`
+                    const url = `https://warm-taiga-97321.herokuapp.com/inventory/${id}`
                     fetch(url, {
                         method: "DELETE"
                     })
@@ -48,13 +50,17 @@ const SingleAllInventory = ({ car, isLoading, isError, cars, setCars }) => {
             })
     }
     if (isLoading) {
-        return <div>Loading...</div>
+        return <progress className="progress w-56"></progress>
     }
     if (isError) {
         return <div>Error!</div>
     }
     return (
-        <div className='mx-auto'>
+        <div
+            data-aos="zoom-in"
+            data-aos-offset="100"
+            data-aos-duration="600"
+            className='mx-auto'>
 
             <div className="card w-11/12 mx-auto bg-base-100 mt-8 card-shadow">
 

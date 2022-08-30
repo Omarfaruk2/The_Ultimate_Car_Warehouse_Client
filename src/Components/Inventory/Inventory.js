@@ -4,6 +4,7 @@ import { useQuery } from 'react-query'
 import fetchPosts from './FetchApi'
 import SingleInventroy from './SingleInventroy'
 import { Link, useNavigate } from 'react-router-dom'
+import Loading from '../Loading/Loading'
 
 
 const Inventory = () => {
@@ -15,7 +16,7 @@ const Inventory = () => {
 
     const { data, error, isError, isLoading } = useQuery('users', fetchPosts)
     if (isLoading) {
-        return <div>Loading...</div>
+        return <Loading></Loading>
     }
     if (isError) {
         return <div>Error! {error.message}</div>

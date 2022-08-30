@@ -15,7 +15,8 @@ const Reviews = () => {
     // console.log("first", reviews)
 
     return (
-        <div>
+        <div
+        >
             <h2 className='text-4xl text-center font-serif my-12 text-sky-800'>The latest new car releases and expert reviews</h2>
             <div className='grid lg:grid-cols-4 sm:grid-cols-1 mb-9 gap-4 w-11/12 mx-auto'>
                 {

@@ -6,10 +6,14 @@ import swal from 'sweetalert'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import Row from './Row'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import { signOut } from 'firebase/auth'
+import axiosPrivate from '../api/axiosPrivate'
 
 const Myitems = () => {
 
-
+    const navigate = useNavigate()
     const [user, loading] = useAuthState(auth)
 
     const [product, setProduct] = useState([])
@@ -17,12 +21,38 @@ const Myitems = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/myitems/${user?.email}`
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setProduct(data))
 
-    }, [user?.email])
+
+        const getorders = async () => {
+            const email = user?.email
+            console.log(email)
+            const url = `https://warm-taiga-97321.herokuapp.com/myitems/${email}`
+
+            try {
+                const { data } = await axiosPrivate.get(url)
+                setProduct(data)
+            }
+            catch (error) {
+                console.log(error.message)
+                if (error.response.status === 403 || error.response.status === 401) {
+
+                    // signOut(auth)
+                    // navigate("/login")
+                }
+            }
+
+        }
+        getorders()
+
+        // fetch(url, {
+        //     headers: {
+        //         authorization: `Bearer ${localStorage.getItem("accessToken")}`
+        //     }
+        // })
+        //     .then(res => res.json())
+        //     .then(data => setProduct(data))
+
+    }, [navigate, user?.email])
 
 
     if (loading) {
@@ -42,7 +72,7 @@ const Myitems = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    const url = `http://localhost:5000/inventory/${id}`
+                    const url = `https://warm-taiga-97321.herokuapp.com/inventory/${id}`
                     fetch(url, {
                         method: "DELETE"
                     })
@@ -50,7 +80,7 @@ const Myitems = () => {
                         .then(data => {
                             if (data?.deletedCount > 0) {
 
-                                const remaining = product.filter((data) => data._id !== id)
+                                const remaining = product.filter((data) => data?._id !== id)
                                 setProduct(remaining)
                                 console.log("success")
                             }

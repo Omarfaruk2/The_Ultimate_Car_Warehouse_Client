@@ -17,7 +17,8 @@
 
 .header-nav li a,
 .logout-text {
-    color: black;
+    color: white;
+
     /* text-shadow: 1px 1px rgba(0, 0, 0, 0.4); */
     font-size: 17px;
     font-weight: 700;

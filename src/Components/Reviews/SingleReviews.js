@@ -8,7 +8,11 @@ const SingleReviews = ({ review }) => {
     const { image, peoplereview, reviewimg, rating, reviewwork } = review
 
     return (
-        <div >
+        <div
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"
+        >
             <div className='mb-4'>
                 <div className="card w-full  bg-base-100 card-shadow">
                     <figure><img className='' src={image} alt="Shoes" /></figure>

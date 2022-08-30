@@ -16,7 +16,11 @@ const SingleInventroy = ({ car }) => {
 
 
     return (
-        <div className='mx-auto'>
+        <div
+            data-aos="zoom-in"
+            data-aos-offset="100"
+            data-aos-duration="600"
+            className='mx-auto'>
 
             <div className="card w-11/12 mx-auto bg-base-100 mt-8 card-shadow">
 

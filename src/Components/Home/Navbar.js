@@ -1,20 +1,23 @@
 import React from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import auth from '../../firebase.init'
 import "./Navbar.css"
 import { signOut } from 'firebase/auth'
+// import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+
     const [user, loading, error] = useAuthState(auth)
 
-
+    const navigate = useNavigate()
 
     // console.log(user)
 
 
     const logout = () => {
         signOut(auth)
+        navigate("/login")
     }
 
     const menuItems =
@@ -48,7 +51,9 @@ const Navbar = () => {
 
     return (
         <div className=''>
-            <div data-aos="fade-down" data-aos-duration="2000" className="navbar navbar-head ">
+            <div
+                // data-aos="fade-down" data-aos-duration="2000" 
+                className="navbar bg-slate-800 ">
                 <div className="navbar-start">
 
                     <h3 className=" w-20 h-16 my-auto lg:ml-24 ml-6  normal-case text-xl">

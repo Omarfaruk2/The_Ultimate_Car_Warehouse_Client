@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Login.css"
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGoogle, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import auth from '../../firebase.init'
 import loginimg from "../../img/login.png"
 import { useForm } from "react-hook-form"
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth'
+import axios from 'axios'
+import { EmailAuthProvider } from 'firebase/auth'
+import Loading from '../Loading/Loading'
 
 const Login = () => {
 
-
+    const [sendPasswordResetEmail, sending, Emainerror] = useSendPasswordResetEmail(auth)
+    const [email, setEmail] = useState('')
     let navigate = useNavigate()
     let location = useLocation()
     let from = location.state?.from?.pathname || "/"
@@ -17,20 +22,32 @@ const Login = () => {
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth)
     const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth)
 
-    const onSubmit = (data) => {
+    const onSubmit = async userdata => {
 
-        signInWithEmailAndPassword(data?.email, data?.password)
-        // console.log(data)
+        const email = userdata?.email
+
+        await signInWithEmailAndPassword(userdata?.email, userdata?.password)
+
+        const { data } = await axios.post('https://warm-taiga-97321.herokuapp.com/login', { email })
+        console.log(data)
+        localStorage.setItem("accessToken", data.accessToken)
+        navigate(from, { replace: true })
+
+
     }
 
     if (loading || gloading) {
-        return <p>Loading......</p>
+        return <Loading className='h-[100vh]'></Loading>
     }
 
     if (user || guser) {
+
         navigate(from, { replace: true })
     }
 
+    if (sending) {
+        return <p>Sending...</p>
+    }
 
     if (error || gerror) {
         return (
@@ -39,6 +56,7 @@ const Login = () => {
             </div>
         )
     }
+
 
 
     return (
@@ -58,24 +76,46 @@ const Login = () => {
 
                                 {/* <input placeholder='Your Email' {...register("email", { required: true })} /> */}
 
-                                <input type="email" placeholder="Type Your Email" class="input input-bordered input-accent w-full max-w-xs"  {...register("email", { required: true })} />
+                                <input type="email" placeholder="Type Your Email"
+
+
+
+
+                                    className="input input-bordered input-accent w-full max-w-xs"  {...register("email", { required: true })} />
                                 {errors.lastName && <p>Last name is required</p>}
 
 
 
-                                <input type="password" placeholder="Type Your Password" class="input input-bordered input-accent w-full max-w-xs" {...register("password", { required: true, minLength: 6 })} />
+                                <input type="password" placeholder="Type Your Password" className="input input-bordered input-accent w-full max-w-xs" {...register("password", { required: true, minLength: 6 })} />
                                 <p>{errors.mail?.message}</p>
 
                                 {/* <input type="submit" /> */}
                                 <div>
                                     <p className='text-center'>
-                                        <button type="submit" className="btn w-2/4 btn-info"><span className='text-violet-50'>Submit</span></button>
+                                        <button type="submit" className="btn w-2/4 btn-info"><span className='text-violet-50 font-extrabold'>LOgin</span></button>
                                     </p>
                                 </div>
 
                             </form>
 
-                            <span>Are you new user ? <Link className='text-black underline underline-offset-1' to="/signup ">Go to Sgn up.</Link> </span>
+                            {/* ---------------------------------------- */}
+
+
+                            <span
+                                onClick={async () => {
+                                    await sendPasswordResetEmail(email)
+                                    alert('Sent email')
+                                }}
+
+                                className='mb-1 text-right'>
+                                Forget Password ?
+                            </span>
+
+                            <span className='text-xl'>Are you new user ?
+                                <Link className='text-black underline underline-offset-1' to="/signup ">Go to Sgn up.</Link>
+                            </span>
+
+
 
                             <div>
                                 <div className='or'>

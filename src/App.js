@@ -20,6 +20,7 @@ function App() {
 
   return (
     <div>
+      {/* https://warm-taiga-97321.herokuapp.com/inventory */}
 
       <Navbar />
 

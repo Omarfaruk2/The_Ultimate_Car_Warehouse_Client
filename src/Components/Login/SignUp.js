@@ -57,34 +57,34 @@ const SignUp = () => {
                             {/* From */}
                             <div className="card-body fromOrder">
 
-                                <h2 className="card-title text-emerald-500">Sign Up</h2>
+                                <h2 className="text-2xl font-bold text-center">Sign Up</h2>
 
                                 <form className=' grid grid-cols-1 gap-[.75rem] mt-10' onSubmit={handleSubmit(onSubmit)}>
 
 
 
-                                    <input onChange={(e) => setDisplayName(e.target.value)} type="text" placeholder="Type Your Name" class="input input-bordered input-accent w-full max-w-xs" {...register("name", { required: true, minLength: 1, maxLength: 50 })} />
+                                    <input onChange={(e) => setDisplayName(e.target.value)} type="text" placeholder="Type Your Name" className="input input-bordered input-accent w-full max-w-xs" {...register("name", { required: true, minLength: 1, maxLength: 50 })} />
 
                                     {/* {errors?.name?.ref?.minLength === 'required' && "First name is required"} */}
 
                                     {/* <input placeholder='Your Email' {...register("email", { required: true })} /> */}
 
-                                    <input type="email" class="input input-bordered input-accent w-full max-w-xs" placeholder='Type Your Email' {...register("email", { required: true })} />
+                                    <input type="email" className="input input-bordered input-accent w-full max-w-xs" placeholder='Type Your Email' {...register("email", { required: true })} />
                                     {errors.lastName && <p>Last name is required</p>}
 
 
-                                    <input placeholder='Type  Your Password' class="input input-bordered input-accent w-full max-w-xs" type="password" {...register("password",
+                                    <input placeholder='Type  Your Password' className="input input-bordered input-accent w-full max-w-xs" type="password" {...register("password",
                                         { required: true, minLength: 6 })} />
                                     <p>{errors.mail?.message}</p>
 
                                     {/* <input type="submit" /> */}
                                     <div>
                                         <p className='text-center'>
-                                            <button type="submit" className="btn w-2/4 btn-info"><span className='text-violet-50'>Submit</span></button>
+                                            <button type="submit" className="btn w-2/4 btn-info"><span className='text-violet-50 font-bold'>Sign Up</span></button>
                                         </p>
                                     </div>
                                 </form>
-                                <span>Already have an account? <Link className='underline underline-offset-1 text-green-800' to="/login ">Go to Login</Link> </span>
+                                <span className='text-xl'>Already have an account? <Link className='underline underline-offset-1 text-black' to="/login ">Go to Login</Link> </span>
 
                                 {/* or */}
 
