@@ -22,16 +22,14 @@ const Login = () => {
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth)
     const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth)
 
-    const onSubmit = async userdata => {
+    const onSubmit = data => {
 
-        const email = userdata?.email
+        const email = data?.email
 
-        await signInWithEmailAndPassword(userdata?.email, userdata?.password)
-
-        const { data } = await axios.post('https://warm-taiga-97321.herokuapp.com/login', { email })
-        console.log(data)
-        localStorage.setItem("accessToken", data.accessToken)
-        navigate(from, { replace: true })
+        signInWithEmailAndPassword(data?.email, data?.password)
+        // const { data } = await axios.post('https://warm-taiga-97321.herokuapp.com/login', { email })
+        // console.log(data)
+        // localStorage.setItem("accessToken", data.accessToken)
 
 
     }

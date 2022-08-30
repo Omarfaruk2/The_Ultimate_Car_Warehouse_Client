@@ -1,5 +1,5 @@
 @media only screen and (max-width: 576px) {
-    .menuNaving {
+    .Naving {
         width: 128px;
         margin-right: 256px;
         padding-left: 0.75rem;
@@ -22,4 +22,393 @@
     /* text-shadow: 1px 1px rgba(0, 0, 0, 0.4); */
     font-size: 17px;
     font-weight: 700;
+}
+
+
+/* -------------------------------------------------------janu navber kela hobe--------------------------------------- */
+
+
+.janu {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.janu.horizontal {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.janu.horizontal :where(li) {
+    flex-direction: row;
+}
+
+.janu :where(li) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+
+.janu :where(li:not(.janu-title))> :where(*:not(ul)) {
+    display: flex;
+}
+
+.janu :where(li:not(.disabled):not(.janu-title))> :where(*:not(ul)) {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    align-items: center;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.janu> :where(li > *:not(ul):focus) {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.janu> :where(li.disabled > *:not(ul):focus) {
+    cursor: auto;
+}
+
+.janu> :where(li) :where(ul) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.janu> :where(li)> :where(ul) {
+    position: absolute;
+    display: none;
+    top: initial;
+    left: 100%;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.janu> :where(li:hover)> :where(ul) {
+    display: flex;
+}
+
+.janu> :where(li:focus)> :where(ul) {
+    display: flex;
+}
+
+.janu.horizontal li.bordered>a,
+.janu.horizontal li.bordered>button,
+.janu.horizontal li.bordered>span {
+    border-left-width: 0px;
+    border-bottom-width: 4px;
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--p) / var(--tw-border-opacity));
+}
+
+.janu.horizontal li.bordered>a,
+.janu.horizontal li.bordered>button,
+.janu.horizontal li.bordered>span {
+    border-left-width: 0px;
+    border-bottom-width: 4px;
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--p) / var(--tw-border-opacity));
+}
+
+.janu.horizontal li.bordered>a,
+.janu.horizontal li.bordered>button,
+.janu.horizontal li.bordered>span {
+    border-left-width: 0px;
+    border-bottom-width: 4px;
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--p) / var(--tw-border-opacity));
+}
+
+.janu[class*=" p-"] li>*,
+.janu[class^="p-"] li>* {
+    border-radius: var(--rounded-btn, 0.5rem);
+}
+
+.janu[class*=" p-"] li>*,
+.janu[class^="p-"] li>* {
+    border-radius: var(--rounded-btn, 0.5rem);
+}
+
+.janu :where(li.bordered > *) {
+    border-left-width: 4px;
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--p) / var(--tw-border-opacity));
+}
+
+.janu :where(li)> :where(*:not(ul)) {
+    gap: 0.75rem
+        /* 12px */
+    ;
+    padding-left: 1rem
+        /* 16px */
+    ;
+    padding-right: 1rem
+        /* 16px */
+    ;
+    padding-top: 0.75rem
+        /* 12px */
+    ;
+    padding-bottom: 0.75rem
+        /* 12px */
+    ;
+    color: currentColor;
+}
+
+.janu :where(li:not(.janu-title):not(:empty))> :where(*:not(ul):focus),
+.janu :where(li:not(.janu-title):not(:empty))> :where(*:not(ul):hover) {
+    background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+    --tw-bg-opacity: 0.1;
+}
+
+.janu :where(li:not(.janu-title):not(:empty))> :where(*:not(ul):focus),
+.janu :where(li:not(.janu-title):not(:empty))> :where(*:not(ul):hover) {
+    background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+    --tw-bg-opacity: 0.1;
+}
+
+.janu :where(li:not(.janu-title):not(:empty))> :where(:not(ul).active),
+.janu :where(li:not(.janu-title):not(:empty))> :where(*:not(ul):active) {
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--p) / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+
+.janu :where(li:not(.janu-title):not(:empty))> :where(:not(ul).active),
+.janu :where(li:not(.janu-title):not(:empty))> :where(*:not(ul):active) {
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--p) / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+
+.janu :where(li:empty) {
+    margin-left: 1rem
+        /* 16px */
+    ;
+    margin-right: 1rem
+        /* 16px */
+    ;
+    margin-top: 0.5rem
+        /* 8px */
+    ;
+    margin-bottom: 0.5rem
+        /* 8px */
+    ;
+    height: 1px;
+    background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+    --tw-bg-opacity: 0.1;
+}
+
+.janu li.disabled>* {
+    -webkit-user-select: none;
+    user-select: none;
+    color: hsl(var(--bc) / var(--tw-text-opacity));
+    --tw-text-opacity: 0.2;
+}
+
+.janu li.disabled>*:hover {
+    background-color: transparent;
+}
+
+.janu li.hover-bordered a {
+    border-left-width: 4px;
+    border-color: transparent;
+}
+
+.janu li.hover-bordered a:hover {
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--p) / var(--tw-border-opacity));
+}
+
+.janu.compact li>a,
+.janu.compact li>span {
+    padding-top: 0.5rem
+        /* 8px */
+    ;
+    padding-bottom: 0.5rem
+        /* 8px */
+    ;
+    font-size: 0.875rem
+        /* 14px */
+    ;
+    line-height: 1.25rem
+        /* 20px */
+    ;
+}
+
+.janu.compact li>a,
+.janu.compact li>span {
+    padding-top: 0.5rem
+        /* 8px */
+    ;
+    padding-bottom: 0.5rem
+        /* 8px */
+    ;
+    font-size: 0.875rem
+        /* 14px */
+    ;
+    line-height: 1.25rem
+        /* 20px */
+    ;
+}
+
+.janu .janu-title>* {
+    padding-top: 0.25rem
+        /* 4px */
+    ;
+    padding-bottom: 0.25rem
+        /* 4px */
+    ;
+    font-size: 0.75rem
+        /* 12px */
+    ;
+    line-height: 1rem
+        /* 16px */
+    ;
+    font-weight: 700;
+    color: hsl(var(--bc) / var(--tw-text-opacity));
+    --tw-text-opacity: 0.4;
+}
+
+
+.janu :where(li:not(.disabled))> :where(*:not(ul)) {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.janu> :where(li:first-child) {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: unset;
+}
+
+.janu> :where(li:first-child)> :where(:not(ul)) {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: unset;
+}
+
+.janu> :where(li:last-child) {
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.janu> :where(li:last-child)> :where(:not(ul)) {
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.janu> :where(li)> :where(ul) :where(li) {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.janu> :where(li)> :where(ul) :where(li) :where(ul) {
+    padding-left: 1rem
+        /* 16px */
+    ;
+}
+
+.janu> :where(li)> :where(ul) :where(li)> :where(:not(ul)) {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.janu> :where(li)> :where(ul)> :where(li:first-child) {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: unset;
+}
+
+.janu> :where(li)> :where(ul)> :where(li:first-child)> :where(:not(ul)) {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: unset;
+}
+
+.janu> :where(li)> :where(ul)> :where(li:last-child) {
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.janu> :where(li)> :where(ul)> :where(li:last-child)> :where(:not(ul)) {
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+
+
+
+/* ========================================================================= */
+
+.janu-horizontal {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.janu-horizontal :where(li) {
+    flex-direction: row;
+}
+
+.janu-horizontal> :where(li)> :where(ul) {
+    top: 100%;
+    left: initial;
+}
+
+.janu-horizontal :where(li.bordered > *) {
+    border-left-width: 0px;
+    border-bottom-width: 4px;
+}
+
+.janu-horizontal> :where(li:first-child) {
+    border-top-left-radius: inherit;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: inherit;
+}
+
+.janu-horizontal> :where(li:first-child)> :where(*:not(ul)) {
+    border-top-left-radius: inherit;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: inherit;
+}
+
+.janu-horizontal> :where(li:last-child) {
+    border-top-left-radius: unset;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: unset;
+}
+
+.janu-horizontal> :where(li:last-child)> :where(*:not(ul)) {
+    border-top-left-radius: unset;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: unset;
 }

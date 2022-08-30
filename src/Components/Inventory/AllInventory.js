@@ -44,7 +44,6 @@ const AllInventory = () => {
                         isLoading={isLoading}
                         isError={isError}
                         error={error}
-
                     >
                     </SingleAllInventory>)
                 }

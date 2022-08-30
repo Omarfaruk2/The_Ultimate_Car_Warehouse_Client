@@ -34,19 +34,26 @@ const Navbar = () => {
 
 
             <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/task">Task</Link></li>
+            {/* <li><Link to="/task">Task</Link></li> */}
 
 
 
             <li>
                 {user ?
                     <button onClick={logout}
-                        className="btn btn-ghost text-neutral-focus logout-text">Sign Out</button>
+                        className="btn btn-ghost logout-text">Sign Out</button>
                     : <Link to="/login">Login</Link>
                 }
             </li>
 
         </>
+
+
+
+    // https://meet.google.com/ivw-uxtd-pbe
+
+
+
 
 
     return (
@@ -64,7 +71,8 @@ const Navbar = () => {
 
                 </div>
                 <div className="navbar-center hidden  lg:flex">
-                    <ul className="menu menu-horizontal header-nav p-0">
+
+                    <ul className="janu janu-horizontal header-nav p-0">
                         {menuItems}
                     </ul>
                 </div>
@@ -76,7 +84,7 @@ const Navbar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex="0" className="menu menu-compact dropdown-content 
-                         menuNaving   
+                        Naving   
                           
                           shadow bg-base-100 rounded-box ">
                             {/* w-32 mr-16 mt-3 py-2 px-3  */}
