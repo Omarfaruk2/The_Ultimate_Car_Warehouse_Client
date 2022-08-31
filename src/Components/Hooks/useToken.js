@@ -11,7 +11,7 @@ const useToken = (user) => {
             const email = user?.user?.email
             if (email) {
                 const { data } = await axios.post(
-                    "http://localhost:5000/login",
+                    "https://warm-taiga-97321.herokuapp.com/login",
                     { email }
                 )
                 setToken(data.accessToken)

@@ -13,7 +13,7 @@ const AllInventory = () => {
     const [cars, setCars] = useState()
 
     useEffect(() => {
-        fetch("http://localhost:5000/inventory")
+        fetch("https://warm-taiga-97321.herokuapp.com/inventory")
             .then(res => res.json())
             .then(cardata => setCars(cardata))
     }, [])

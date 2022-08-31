@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div>
-      {/* http://localhost:5000/inventory */}
+      {/* https://warm-taiga-97321.herokuapp.com/inventory */}
 
       <Navbar />
 
