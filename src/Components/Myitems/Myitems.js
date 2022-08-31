@@ -16,7 +16,6 @@ const Myitems = () => {
     const [product, setProduct] = useState([])
     const navigate = useNavigate()
 
-    // console.log(user?.email, "user")
     const email = user?.email
 
 

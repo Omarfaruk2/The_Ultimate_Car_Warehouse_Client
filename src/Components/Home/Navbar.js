@@ -4,15 +4,18 @@ import { Link, useNavigate } from 'react-router-dom'
 import auth from '../../firebase.init'
 import "./Navbar.css"
 import { signOut } from 'firebase/auth'
+import Loading from '../Loading/Loading'
 // import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
 
-    const [user, loading, error] = useAuthState(auth)
+    const [user, loading,] = useAuthState(auth)
 
     const navigate = useNavigate()
 
-    // console.log(user)
+    if (loading) {
+        return <Loading></Loading>
+    }
 
 
     const logout = () => {
@@ -32,10 +35,8 @@ const Navbar = () => {
                 </>
             }
 
-
             <li><Link to="/blog">Blog</Link></li>
             {/* <li><Link to="/task">Task</Link></li> */}
-
 
 
             <li>
@@ -47,12 +48,6 @@ const Navbar = () => {
             </li>
 
         </>
-
-
-
-    // https://meet.google.com/ivw-uxtd-pbe
-
-
 
 
 
