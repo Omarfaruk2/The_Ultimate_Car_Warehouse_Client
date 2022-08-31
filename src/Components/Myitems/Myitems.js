@@ -6,27 +6,51 @@ import swal from 'sweetalert'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import Row from './Row'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import { signOut } from 'firebase/auth'
 
 const Myitems = () => {
 
-
     const [user, loading] = useAuthState(auth)
-
     const [product, setProduct] = useState([])
+    const navigate = useNavigate()
+
+    // console.log(user?.email, "user")
+    const email = user?.email
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/myitems/${user?.email}`
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setProduct(data))
-
-    }, [user?.email])
 
 
-    if (loading) {
-        return <p>loading........</p>
-    }
+        const getOrders = async () => {
+
+            if (loading) {
+                return <p>loading........</p>
+            }
+            const url = `http://localhost:5000/myitems?email=${email}`
+            try {
+                const { data } = await axios.get(url, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem("accessToken")}`
+                    }
+                })
+                setProduct(data)
+            }
+            catch (error) {
+                console.log(error.message)
+                if (error.response.status === 401 || error.response.status === 403) {
+                    signOut(auth)
+                    navigate('/login')
+                }
+            }
+        }
+        getOrders()
+
+
+
+    }, [user])
+
 
 
 
@@ -49,7 +73,7 @@ const Myitems = () => {
                         .then(data => {
                             if (data?.deletedCount > 0) {
 
-                                const remaining = product.filter((data) => data._id !== id)
+                                const remaining = product?.filter((data) => data._id !== id)
                                 setProduct(remaining)
                                 console.log("success")
                             }

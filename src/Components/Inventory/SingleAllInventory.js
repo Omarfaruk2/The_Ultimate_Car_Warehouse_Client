@@ -32,7 +32,7 @@ const SingleAllInventory = ({ car, isLoading, isError, cars, setCars }) => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    const url = `https://warm-taiga-97321.herokuapp.com/inventory/${id}`
+                    const url = `http://localhost:5000/inventory/${id}`
                     fetch(url, {
                         method: "DELETE"
                     })

@@ -9,6 +9,7 @@ import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth'
 import axios from 'axios'
 import { EmailAuthProvider } from 'firebase/auth'
 import Loading from '../Loading/Loading'
+import useToken from '../Hooks/useToken'
 
 const Login = () => {
 
@@ -22,26 +23,54 @@ const Login = () => {
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth)
     const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth)
 
-    const onSubmit = data => {
+    const [token] = useToken(user || guser)
 
+
+
+    const onSubmit = data => {
         const email = data?.email
+        const password = data?.password
+        console.log(user, "user")
 
         signInWithEmailAndPassword(data?.email, data?.password)
-        // const { data } = await axios.post('https://warm-taiga-97321.herokuapp.com/login', { email })
-        // console.log(data)
+
+        // const { data } = await axios.post("http://localhost:5000/login", { email })
+        // console.log(data, "data")
         // localStorage.setItem("accessToken", data.accessToken)
+
+        // navigate(from, { replace: true })
 
 
     }
+
+    // const order = async () => {
+    //     const email = guser?.email
+    //     const { data } = await axios.post("http://localhost:5000/login", { email })
+    //     console.log(data, "data")
+    //     localStorage.setItem("accessToken", data.accessToken)
+
+    //     navigate(from, { replace: true })
+    // }
+
+
+    // if (guser) {
+    //     order()
+    // }
+
+
+    if (token) {
+        navigate(from, { replace: true })
+
+
+    }
+
+
 
     if (loading || gloading) {
         return <p className='text-center mx-auto h-[80vh]'><progress className="progress w-1/4 mt-20"></progress></p>
     }
 
-    if (user || guser) {
 
-        navigate(from, { replace: true })
-    }
 
     if (sending) {
         return <p>Sending...</p>
@@ -55,7 +84,7 @@ const Login = () => {
         )
     }
 
-
+    console.log(token, "token")
 
     return (
         <div>

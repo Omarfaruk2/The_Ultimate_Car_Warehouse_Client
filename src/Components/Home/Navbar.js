@@ -40,8 +40,8 @@ const Navbar = () => {
 
             <li>
                 {user ?
-                    <button onClick={logout}
-                        className="btn btn-ghost logout-text">Sign Out</button>
+                    <h3 onClick={logout}
+                        className="text-white">Sign Out</h3>
                     : <Link to="/login">Login</Link>
                 }
             </li>
@@ -120,7 +120,7 @@ const Navbar = () => {
                             </a>
                         </li>
 
-                        <li><button className='btn  btn-ghost pb-6'><span className='logout-text'>Logout</span></button></li>
+                        <li><button onClick={logout} className='btn  p-6'><span className='logout-text'>Logout</span></button></li>
                     </ul>
                 </div>
             </div>

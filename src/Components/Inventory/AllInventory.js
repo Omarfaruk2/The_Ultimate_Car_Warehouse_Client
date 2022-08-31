@@ -13,12 +13,12 @@ const AllInventory = () => {
     const [cars, setCars] = useState()
 
     useEffect(() => {
-        fetch("https://warm-taiga-97321.herokuapp.com/inventory")
+        fetch("http://localhost:5000/inventory")
             .then(res => res.json())
             .then(cardata => setCars(cardata))
     }, [])
 
-    // console.log(cars, "cars")
+    // console.log(cars, "cars") https://warm-taiga-97321.herokuapp.com/
 
     if (isLoading || !cars) {
         return <p className='text-center mx-auto h-[80vh]'><progress className="progress w-1/4 mt-20"></progress></p>

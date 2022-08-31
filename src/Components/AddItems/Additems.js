@@ -4,6 +4,7 @@ import auth from '../../firebase.init'
 import { useForm } from "react-hook-form"
 import "./Additems.css"
 import { useNavigate } from 'react-router-dom'
+import Loading from '../Loading/Loading'
 
 const Additems = () => {
 
@@ -12,11 +13,15 @@ const Additems = () => {
     const { register, formState: { errors }, handleSubmit } = useForm()
 
 
+    if (loading) {
+        return <Loading></Loading>
+    }
+
 
     const onSubmit = (data) => {
         console.log(data)
 
-        const url = "https://warm-taiga-97321.herokuapp.com/inventory"
+        const url = "http://localhost:5000/inventory"
         fetch(url, {
             method: 'POST',
             headers: {

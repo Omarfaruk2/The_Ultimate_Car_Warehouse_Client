@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div>
-      {/* https://warm-taiga-97321.herokuapp.com/inventory */}
+      {/* http://localhost:5000/inventory */}
 
       <Navbar />
 
@@ -42,7 +42,12 @@ function App() {
         } />
 
         <Route path="/additems" element={<Additems />} />
-        <Route path="/myitems" element={<Myitems />} />
+        <Route path="/myitems" element={
+          <RequireAuth>
+            <Myitems />
+          </RequireAuth>
+
+        } />
         <Route path="/login" element={<Login />} />
         <Route path="/Signup" element={<SignUp />} />
         <Route path="/blog" element={<Blog />} />
