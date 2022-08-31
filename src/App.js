@@ -29,9 +29,9 @@ function App() {
         <Route path="/home" element={<Home />} />
 
         <Route path="inventory" element={
-          // <RequireAuth>
-          <AllInventory />
-          // </RequireAuth>
+          <RequireAuth>
+            <AllInventory />
+          </RequireAuth>
         } />
 
         <Route path="/inventory/:id" element={

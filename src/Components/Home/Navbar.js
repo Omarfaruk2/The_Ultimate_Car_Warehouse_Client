@@ -115,7 +115,7 @@ const Navbar = () => {
                             </a>
                         </li>
 
-                        <li><button onClick={logout} className='btn  p-6'><span className='logout-text'>Logout</span></button></li>
+                        <li><button onClick={logout} className='btn'><span className='logout-text'>Logout</span></button></li>
                     </ul>
                 </div>
             </div>
