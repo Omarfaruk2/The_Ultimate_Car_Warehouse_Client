@@ -1,4 +1,4 @@
-## Project Name: The Ulmate Warehouse
+## Project Name: The Unlimited Warehouse
 ## Live site Link: "https://fruit-ef29c.web.app//"
 ## short descpription  :
 Ultimate Warehouse are responsive sites that automatically scale to fit the screen size of your viewer's device. The advantages of having an app are that it allows you to send push notifications to your customers (with their permission, of course) and often can be used offline.
