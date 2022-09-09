@@ -32,8 +32,8 @@ const StockUpdate = () => {
 
     const { name, image, description, price, quantity, supplierName, _id } = car || {}
 
-    const handleDelivered = (id) => {
 
+    const handleDelivered = (id) => {
         const productQuantity = car.quantity
         const newQuantity = productQuantity - 1
         console.log(newQuantity)
