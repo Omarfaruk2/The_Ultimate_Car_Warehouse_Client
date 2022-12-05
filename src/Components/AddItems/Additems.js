@@ -21,7 +21,7 @@ const Additems = () => {
     const onSubmit = (data) => {
         console.log(data)
 
-        const url = "https://warm-taiga-97321.herokuapp.com/inventory"
+        const url = "https://no-problem.onrender.com/inventory"
         fetch(url, {
             method: 'POST',
             headers: {

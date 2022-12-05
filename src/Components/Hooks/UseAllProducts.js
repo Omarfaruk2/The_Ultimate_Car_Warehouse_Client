@@ -12,7 +12,7 @@ const UseallProducts = () => {
 
 
     useEffect(() => {
-        const url = "https://warm-taiga-97321.herokuapp.com/myitems"
+        const url = "https://no-problem.onrender.com/myitems"
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))

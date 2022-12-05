@@ -10,7 +10,7 @@ const HookALlproduct = () => {
 
 
     useEffect(() => {
-        const url = "https://warm-taiga-97321.herokuapp.com/inventory"
+        const url = "https://no-problem.onrender.com/inventory"
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))

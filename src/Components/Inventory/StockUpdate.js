@@ -18,7 +18,7 @@ const StockUpdate = () => {
 
 
     useEffect(() => {
-        fetch(`https://warm-taiga-97321.herokuapp.com/inventory/${id}`)
+        fetch(`https://no-problem.onrender.com/inventory/${id}`)
             .then(res => res.json())
             .then(data => setCard(data))
     }, [id])
@@ -38,7 +38,7 @@ const StockUpdate = () => {
         const newQuantity = productQuantity - 1
         console.log(newQuantity)
 
-        const url = `https://warm-taiga-97321.herokuapp.com/inventory/${id}`
+        const url = `https://no-problem.onrender.com/inventory/${id}`
         fetch(url, {
             method: "PUT",
             headers: {
@@ -91,7 +91,7 @@ const StockUpdate = () => {
 
             const newQuantity = previousStock + fieldStock
 
-            const url = `https://warm-taiga-97321.herokuapp.com/inventory/${id}`
+            const url = `https://no-problem.onrender.com/inventory/${id}`
             fetch(url, {
                 method: "PUT",
                 headers: {
